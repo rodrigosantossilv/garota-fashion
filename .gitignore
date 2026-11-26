@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+.vercel/
+# gerado no build a partir de dados/ (sem quantidades)
+public/catalogo.json
+coverage/
+.DS_Store

@@ -1,0 +1,33 @@
+/* Estilos compartilhados pelas telas do painel */
+.p-pagina { display: flex; flex-direction: column; gap: 18px; }
+.p-topo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.p-topo h1 { margin: 0; font-size: 22px; color: var(--texto); }
+.p-topo p { margin: 4px 0 0; color: var(--texto-suave); font-size: 14px; }
+.p-cartao { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 18px; min-width: 0; }
+.p-cartao h2 { margin: 0 0 14px; font-size: 16px; }
+.p-campo { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.p-campo > span { font-size: 13px; font-weight: 600; color: var(--texto); }
+.p-campo small { color: var(--texto-suave); font-size: 12px; }
+.p-input {
+  width: 100%; border: 1.5px solid var(--borda); background: var(--branco); border-radius: 10px;
+  padding: 10px 12px; font-size: 15px; min-height: 44px;
+}
+.p-input:focus { outline: none; border-color: var(--rosa); box-shadow: 0 0 0 3px rgba(201,36,95,.15); }
+.p-filtros { display: flex; flex-wrap: wrap; gap: 10px; }
+.p-filtros > * { flex: 1 1 160px; }
+.p-erro { background: #fdecec; color: var(--vermelho); border: 1px solid #f5c2c2; padding: 10px 12px; border-radius: 10px; font-size: 14px; margin: 0; }
+.p-vazio { text-align: center; color: var(--texto-suave); padding: 32px 12px; }
+.p-vazio strong { display: block; color: var(--texto); font-size: 16px; margin-bottom: 6px; }
+.pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill-disponivel { background: #e3f4ec; color: var(--verde); }
+.pill-baixo { background: #fdf1dc; color: var(--amarelo); }
+.pill-esgotado { background: #fbe4e4; color: var(--vermelho); }
+.pill-novo { background: var(--rosa-claro); color: var(--rosa); }
+.pill-oculto { background: #eee8ec; color: var(--texto-suave); }
+.p-tabela-wrap { overflow-x: auto; }
+.p-tabela { width: 100%; border-collapse: collapse; font-size: 14px; }
+.p-tabela th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-suave); padding: 8px 10px; border-bottom: 1px solid var(--borda); white-space: nowrap; }
+.p-tabela td { padding: 10px; border-bottom: 1px solid #f7e4ee; vertical-align: middle; }
+.num { font-variant-numeric: tabular-nums; }
+.miniatura { width: 48px; height: 60px; border-radius: 8px; object-fit: cover; background: var(--rosa-claro); flex-shrink: 0; display: grid; place-items: center; color: var(--rosa); }
