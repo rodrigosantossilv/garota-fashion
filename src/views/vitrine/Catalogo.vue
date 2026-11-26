@@ -105,8 +105,9 @@ const cardsCategoria = computed(() =>
 </template>
 
 <style scoped>
-.pagina { min-height: 100vh; background: linear-gradient(180deg, var(--fundo-topo) 0%, var(--fundo-topo) 40%, #fbe6fb 100%); }
-main { max-width: 1200px; margin: 0 auto; padding: 16px var(--gutter-d) 0 var(--gutter-e); }
+/* coluna que ocupa a tela toda: o rodapé fica sempre no fim, mesmo com pouco conteúdo */
+.pagina { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; background: linear-gradient(180deg, var(--fundo-topo) 0%, var(--fundo-topo) 40%, #fbe6fb 100%); }
+main { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 16px var(--gutter-d) 0 var(--gutter-e); }
 
 .hero {
   position: relative; border-radius: 20px; overflow: hidden; min-height: 300px;

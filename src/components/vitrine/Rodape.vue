@@ -29,8 +29,9 @@ defineProps({ loja: { type: Object, required: true } })
 </template>
 
 <style scoped>
+/* mesma largura útil do cabeçalho e do conteúdo (1200px menos as margens laterais) */
 .rodape { background: var(--rosa-escuro); color: var(--branco); padding: 36px var(--gutter-d) calc(20px + env(safe-area-inset-bottom, 0px)) var(--gutter-e); margin-top: 48px; }
-.interno { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
+.interno { max-width: calc(1200px - 32px); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
 .marca-bloco { display: flex; flex-direction: column; align-items: flex-start; }
 .marca, .marca-sub { color: var(--branco); }
 .marca { font-size: 40px; }
@@ -39,5 +40,5 @@ defineProps({ loja: { type: Object, required: true } })
 .contatos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-weight: 600; font-size: 15px; }
 .contatos li, .contatos a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .contatos a:hover { text-decoration: underline; }
-.copy { max-width: 1200px; margin: 28px auto 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.25); font-size: 12px; opacity: .8; }
+.copy { max-width: calc(1200px - 32px); margin: 28px auto 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.25); font-size: 12px; opacity: .8; }
 </style>
